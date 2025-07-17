@@ -287,7 +287,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function initTypeAnimations() {
     // Name typing
     new TypeIt("#typing-name", {
-        strings: "Dhruba Khadka",
+        strings: "SANGAM K C",
         speed: 300,
         waitUntilVisible: true,
         loop: true,
@@ -299,7 +299,7 @@ function initTypeAnimations() {
 
     // Role typing with multiple roles
     new TypeIt("#typing-role", {
-        strings: ["Frontend Developer ", "UI/UX Designer ", "Web Developer "],
+        strings: ["Networking ", "Digital Marketing ", "Web Developer "],
         speed: 300,
         waitUntilVisible: true,
         loop: true,
