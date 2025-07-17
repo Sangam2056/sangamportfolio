@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhruba Khadka - Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+        <!-- Favicon -->
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#1E40AF',
+                        accent: '#F59E0B',
+                        dark: {
+                            DEFAULT: '#1F2937',
+                            lighter: '#374151',
+                        },
+                    },
+                    boxShadow: {
+                        'soft': '0 5px 15px rgba(0, 0, 0, 0.05)',
+                        'strong': '0 10px 25px rgba(0, 0, 0, 0.1)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Base styles with improved consistency */
+        .skill-pill {
+            transition: all 0.3s ease;
+        }
+
+        .skill-pill:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Enhanced section titles with better animation */
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            height: 3px;
+            width: 50px;
+            background: #3B82F6;
+            transition: width 0.3s ease, background-color 0.3s ease;
+        }
+
+        .section-title:hover::after {
+            width: 100%;
+            background: linear-gradient(to right, #3B82F6, #1E40AF);
+        }
+
+        /* Card hover effects for consistent interaction */
+        .hover-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hover-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Improved print styles for better hardcopy output */
+        @media print {
+            body {
+                padding: 0;
+                background-color: white;
+                font-size: 12px;
+                color: black;
+            }
+
+            .fixed,
+            .print-hide,
+            .animate-pulse {
+                display: none !important;
+            }
+
+            .max-w-6xl {
+                max-width: none;
+                box-shadow: none;
+                border-radius: 0;
+                margin: 0;
+                padding: 0;
+            }
+
+            section {
+                page-break-inside: avoid;
+                margin-bottom: 1.5rem;
+            }
+
+            .project-card {
+                break-inside: avoid;
+                border: 1px solid #eee;
+            }
+
+            /* Print-specific color adjustments */
+            .text-white,
+            .text-blue-100,
+            .text-blue-200 {
+                color: black !important;
+            }
+
+            .bg-gradient-to-r,
+            .from-primary,
+            .to-secondary {
+                background: white !important;
+                color: black !important;
+                border: 1px solid #ddd;
+            }
+        }
+
+        /* Mobile optimizations */
+        @media (max-width: 640px) {
+            .skill-progress-label {
+                font-size: 0.75rem;
+            }
+
+            .contact-icon {
+                min-width: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 p-4 md:p-8 font-sans text-gray-800">
+    <div class="max-w-6xl mx-auto bg-white shadow-soft rounded-xl overflow-hidden">
+        <!-- Header with geometric background pattern -->
+        <div class="relative bg-gradient-to-r from-primary to-secondary text-white p-8 md:p-12 overflow-hidden">
+            <!-- Decorative elements -->
+            <div class="absolute top-0 right-0 w-72 h-72 bg-white opacity-5 rounded-full -mr-20 -mt-20"></div>
+            <div class="absolute bottom-0 left-0 w-40 h-40 bg-white opacity-5 rounded-full -ml-10 -mb-10"></div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center relative z-10">
+                <div
+                    class="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12 lg:gap-16 w-full md:w-auto mb-8 md:mb-0">
+                    <!-- Profile image with glow effect -->
+                    <div class="relative group mb-12 md:mb-0">
+                        <!-- Enhanced glow effect -->
+                        <div
+                            class="absolute inset-0 bg-gradient-to-r from-blue-400/30 to-yellow-400/30 rounded-full blur-lg transform transition-all duration-500 group-hover:scale-110">
+                        </div>
+
+                        <!-- Animated ring -->
+                        <div class="absolute inset-0 rounded-full border-4 border-white/50 animate-pulse"></div>
+
+                        <!-- Image with hover effect -->
+                        <img src="dhruba.jpg" alt="Dhruba Khadka"
+                            class="w-32 h-32 md:w-36 md:h-36 rounded-full object-cover border-4 border-white shadow-strong relative z-10 transition-transform duration-500 group-hover:scale-105">
+
+                        <!-- Enhanced badges with improved styling and visual hierarchy -->
+                        <div
+                            class="flex flex-col space-y-1 absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-[120%] w-44 md:w-52">
+
+
+                            <!-- Secondary Role Badge -->
+                            <div
+                                class="relative overflow-hidden bg-gradient-to-r from-accent to-yellow-600 text-white text-xs md:text-sm font-bold px-4 md:px-6 py-0 md:py-2.5 rounded-lg shadow-lg flex items-center justify-between w-full border border-yellow-300/30">
+                                <div class="flex items-center">
+                                    <i class="fas fa-code text-yellow-200 mr-2 md:mr-3 text-base md:text-lg"></i>
+                                    <span>Web Developer</span>
+                                </div>
+                                <div class="text-xs bg-yellow-600/50 rounded-full px-2 py-0.5 ml-1">3+ Yrs</div>
+                                <!-- Progress indicator -->
+                                <div class="absolute bottom-0 left-0 h-1 bg-yellow-300/50" style="width: 85%"></div>
+                            </div>
+                            <!-- Primary Role Badge - More prominent -->
+                            <div
+                                class="relative overflow-hidden bg-gradient-to-r from-primary to-blue-700 text-white text-xs md:text-sm font-bold px-4 md:px-6 py-0 md:py-2.5 rounded-lg shadow-lg flex items-center justify-between w-full border border-blue-300/30">
+                                <div class="flex items-center">
+                                    <i class="fas fa-network-wired text-blue-200 mr-2 md:mr-3 text-base md:text-lg"></i>
+                                    <span>CCNA Candidate</span>
+                                </div>
+                                <div class="text-xs bg-blue-600/50 rounded-full px-2 py-0.5 ml-1">2025</div>
+                                <!-- Progress indicator -->
+                                <div class="absolute bottom-0 left-0 h-1 bg-blue-300/50" style="width: 65%"></div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+
+                    <div class="text-center md:text-left mt-16 md:mt-0">
+                        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-2 tracking-tight">DHRUBA KHADKA</h1>
+                        <p class="text-lg sm:text-xl md:text-2xl mb-3 text-blue-100">Web Developer & Network Engineer
+                        </p>
+                        <p class="text-xs sm:text-sm md:text-base opacity-90 mb-4 max-w-md mx-auto md:mx-0">
+                            Creating modern web experiences with clean code, enhanced by networking expertise
+                            for comprehensive digital solutions
+                        </p>
+                        <div class="flex items-center justify-center md:justify-start space-x-3 md:space-x-4">
+                            <a href="#"
+                                class="hover:text-blue-200 transition-colors duration-300 text-xl sm:text-2xl md:text-3xl">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#"
+                                class="hover:text-blue-200 transition-colors duration-300 text-xl sm:text-2xl md:text-3xl">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#"
+                                class="hover:text-blue-200 transition-colors duration-300 text-xl sm:text-2xl md:text-3xl">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <div class="h-6 w-px bg-blue-300/50 mx-1"></div>
+                            <a href="mailto:dhrubakd53@gmail.com"
+                                class="hover:text-blue-200 transition-colors duration-300 flex items-center text-sm sm:text-base md:text-lg">
+                                <i class="fas fa-envelope mr-1 md:mr-2"></i> Email Me
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="text-center md:text-right mt-6 md:mt-0 bg-white/20 p-4 md:p-6 rounded-lg backdrop-blur-sm shadow-lg border border-white/10 w-full md:w-auto">
+                    <h3
+                        class="font-bold text-base md:text-lg mb-1 text-center text-white border-b border-white/20 pb-2">
+                        CONTACT
+                        INFORMATION</h3>
+                    <div class="flex flex-col space-y-1 mt-2">
+                        <p class="flex items-center justify-start p-1 hover:bg-white/10 rounded-md transition-colors">
+                            <i class="fas fa-envelope text-blue-200 text-base md:text-lg w-6 md:w-8 contact-icon"></i>
+                            <span class="ml-2 text-sm md:text-base">dhrubakd53@gmail.com</span>
+                        </p>
+                        <p class="flex items-center justify-start p-1 hover:bg-white/10 rounded-md transition-colors">
+                            <i class="fas fa-phone text-blue-200 text-base md:text-lg w-6 md:w-8 contact-icon"></i>
+                            <span class="ml-2 text-sm md:text-base">+977 9861696726</span>
+                        </p>
+                        <p class="flex items-center justify-start p-1 hover:bg-white/10 rounded-md transition-colors">
+                            <i
+                                class="fas fa-map-marker-alt text-blue-200 text-base md:text-lg w-6 md:w-8 contact-icon"></i>
+                            <span class="ml-2 text-sm md:text-base">Kathmandu, Nepal</span>
+                        </p>
+                        <p class="flex items-center justify-start p-1 hover:bg-white/10 rounded-md transition-colors">
+                            <i class="fas fa-calendar text-blue-200 text-base md:text-lg w-6 md:w-8 contact-icon"></i>
+                            <span class="ml-2 text-sm md:text-base">DOB: 04-03-2000</span>
+                        </p>
+                        <p class="flex items-center justify-start p-1 hover:bg-white/10 rounded-md transition-colors">
+                            <i class="fas fa-user text-blue-200 text-base md:text-lg w-6 md:w-8 contact-icon"></i>
+                            <span class="ml-2 text-sm md:text-base">Nepali, Single</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content with premium styling -->
+        <div class="p-8 md:p-12">
+            <!-- Two-column layout for professional summary -->
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="md:col-span-1">
+                    <h2 class="text-2xl font-bold text-primary section-title pb-2 mb-4">Career Objective</h2>
+                </div>
+                <div class="md:col-span-2">
+                    <p class="text-gray-700 leading-relaxed">
+                        Passionate web developer with additional expertise in networking infrastructure. Focused on building modern, responsive web applications while leveraging my technical knowledge of network systems. Seeking opportunities to create innovative digital solutions that combine clean code with robust infrastructure. Committed to continuous learning and applying my dual skill set to develop secure, scalable applications that deliver exceptional user experiences.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Education with timeline styling -->
+            <section class="mb-12">
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="md:col-span-1">
+                        <h2 class="text-2xl font-bold text-primary section-title pb-2 mb-4">Education</h2>
+                    </div>
+                    <div class="md:col-span-2">
+                        <div
+                            class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-1/2 before:h-full before:w-0.5 before:bg-gray-200">
+                            <div class="relative pl-8">
+                                <div
+                                    class="absolute left-0 top-1 w-4 h-4 rounded-full bg-primary border-4 border-white shadow">
+                                </div>
+                                <div class="bg-gray-50 p-5 rounded-lg shadow-soft hover:shadow-md transition-shadow">
+                                    <div class="flex flex-wrap justify-between mb-2">
+                                        <h3 class="text-lg font-semibold text-gray-800">Bachelor of Science in
+                                            Information Technology</h3>
+                                        <span
+                                            class="text-sm font-medium bg-blue-100 text-primary px-2 py-1 rounded">2022
+                                            – 2025</span>
+                                    </div>
+                                    <p class="text-gray-600 italic mb-2">University of Sunderland</p>
+                                    <p class="text-gray-700">Specializing in network infrastructure, cybersecurity, and
+                                        modern web technologies.</p>
+                                </div>
+                            </div>
+
+                            <div class="relative pl-8">
+                                <div
+                                    class="absolute left-0 top-1 w-4 h-4 rounded-full bg-primary border-4 border-white shadow">
+                                </div>
+                                <div class="bg-gray-50 p-5 rounded-lg shadow-soft hover:shadow-md transition-shadow">
+                                    <div class="flex flex-wrap justify-between mb-2">
+                                        <h3 class="text-lg font-semibold text-gray-800">+2 Science</h3>
+                                        <span
+                                            class="text-sm font-medium bg-blue-100 text-primary px-2 py-1 rounded">2015
+                                            – 2017</span>
+                                    </div>
+                                    <p class="text-gray-600 italic mb-2">Golden Gate International College</p>
+                                    <p class="text-gray-700">Studied physics, chemistry, and computer science, building
+                                        a strong foundation in STEM.</p>
+                                </div>
+                            </div>
+
+                            <div class="relative pl-8">
+                                <div
+                                    class="absolute left-0 top-1 w-4 h-4 rounded-full bg-primary border-4 border-white shadow">
+                                </div>
+                                <div class="bg-gray-50 p-5 rounded-lg shadow-soft hover:shadow-md transition-shadow">
+                                    <div class="flex flex-wrap justify-between mb-2">
+                                        <h3 class="text-lg font-semibold text-gray-800">SLC (School Leaving Certificate)
+                                        </h3>
+                                        <span
+                                            class="text-sm font-medium bg-blue-100 text-primary px-2 py-1 rounded">2014
+                                            – 2015</span>
+                                    </div>
+                                    <p class="text-gray-600 italic mb-2">Shantideep English School</p>
+                                    <p class="text-gray-700">Completed secondary education with distinction, sparking my
+                                        interest in technology.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects with card styling -->
+            <section class="mb-12">
+                <div class="grid md:grid-cols-3 gap-8 mb-6">
+                    <div class="md:col-span-1">
+                        <h2 class="text-2xl font-bold text-primary section-title pb-2 mb-4">Featured Projects</h2>
+                    </div>
+                    <div class="md:col-span-2">
+                        <p class="text-gray-700 mb-6">
+                            A collection of my key projects demonstrating my dual expertise in web
+                            development and networking.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+
+                    <!-- Web Project 1 -->
+                    <div
+                        class="project-card hover-card bg-white rounded-xl overflow-hidden shadow-soft hover:shadow-md transition-all duration-300 border border-gray-100">
+                        <div class="h-2 md:h-3 bg-accent"></div>
+                        <div class="p-4 md:p-6">
+                            <div class="flex flex-wrap md:flex-nowrap justify-between items-start gap-2 mb-3 md:mb-4">
+                                <h3 class="text-lg md:text-xl font-semibold">Personal Portfolio Website</h3>
+                                <span
+                                    class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded whitespace-nowrap">Web
+                                    Development</span>
+                            </div>
+                            <p class="text-gray-600 text-sm md:text-base mb-3 md:mb-4">
+                                Designed and developed a responsive portfolio website showcasing my skills, projects,
+                                and professional journey
+                                with modern web technologies.
+                            </p>
+                            <div class="flex flex-wrap gap-1 md:gap-2 mb-3 md:mb-4">
+                                <span
+                                    class="skill-pill bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">HTML5</span>
+                                <span class="skill-pill bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Tailwind
+                                    CSS</span>
+                                <span
+                                    class="skill-pill bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">JavaScript</span>
+                                <span class="skill-pill bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Responsive
+                                    Design</span>
+                            </div>
+                            <div class="flex justify-between items-center text-xs md:text-sm text-gray-500">
+                                <span><i class="far fa-calendar mr-1"></i> 2023</span>
+                                <span><i class="fas fa-link mr-1"></i> <a href="index.html" target="_blank"
+                                        class="text-primary hover:underline">View Live</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Web Project 2 -->
+                    <div
+                        class="project-card bg-white rounded-xl overflow-hidden shadow-soft hover:shadow-md transition-shadow border border-gray-100">
+                        <div class="h-3 bg-accent"></div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-xl font-semibold">E-commerce Platform</h3>
+                                <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">Web
+                                    Development</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">
+                                Built a fully functional e-commerce website with product catalog, shopping cart, and
+                                secure checkout process.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span
+                                    class="skill-pill bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">React</span>
+                                <span
+                                    class="skill-pill bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Node.js</span>
+                                <span
+                                    class="skill-pill bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">MySQL</span>
+                                <span class="skill-pill bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Payment
+                                    API</span>
+                            </div>
+                            <div class="flex justify-between items-center text-sm text-gray-500">
+                                <span><i class="far fa-calendar mr-1"></i> 2024</span>
+                                <span><i class="fas fa-code mr-1"></i> Personal Project</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Network Project -->
+                    <div
+                        class="project-card bg-white rounded-xl overflow-hidden shadow-soft hover:shadow-md transition-shadow border border-gray-100">
+                        <div class="h-3 bg-primary"></div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-xl font-semibold">Campus Network Design</h3>
+                                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Networking</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">
+                                Designed and simulated a comprehensive campus network with VLANs, routing protocols, and
+                                security measures
+                                using Cisco Packet Tracer.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="skill-pill bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">VLAN</span>
+                                <span class="skill-pill bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">OSPF</span>
+                                <span class="skill-pill bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">ACLs</span>
+                                <span class="skill-pill bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Packet
+                                    Tracer</span>
+                            </div>
+                            <div class="flex justify-between items-center text-sm text-gray-500">
+                                <span><i class="far fa-calendar mr-1"></i> 2024</span>
+                                <span><i class="fas fa-tasks mr-1"></i> Academic Project</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hybrid Project -->
+                    <div
+                        class="project-card bg-white rounded-xl overflow-hidden shadow-soft hover:shadow-md transition-shadow border border-gray-100">
+                        <div class="h-3 bg-gradient-to-r from-primary to-accent"></div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-xl font-semibold">Network Monitoring Dashboard</h3>
+                                <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Hybrid</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">
+                                Developed a web-based dashboard for monitoring network performance, device status, and
+                                traffic analytics
+                                using modern web technologies and networking protocols.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="skill-pill bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">SNMP</span>
+                                <span
+                                    class="skill-pill bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">JavaScript</span>
+                                <span
+                                    class="skill-pill bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Chart.js</span>
+                                <span class="skill-pill bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">REST
+                                    API</span>
+                            </div>
+                            <div class="flex justify-between items-center text-sm text-gray-500">
+                                <span><i class="far fa-calendar mr-1"></i> 2023</span>
+                                <span><i class="fas fa-star mr-1"></i> Featured Project</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Certifications with icon styling -->
+            <section class="mb-12">
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="md:col-span-1">
+                        <h2 class="text-2xl font-bold text-primary section-title pb-2 mb-4">Certifications</h2>
+                    </div>
+                    <div class="md:col-span-2">
+                        <div class="bg-blue-50 border-l-4 border-primary p-6 rounded-lg relative">
+                            <div class="absolute top-4 right-4 text-primary/20 text-5xl">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div class="relative z-10">
+                                <h3 class="text-xl font-semibold text-primary">Cisco Certified Network Associate (CCNA)
+                                </h3>
+                                <p class="text-gray-600 mb-3">Completed July 2025</p>
+                                <p class="text-gray-700">
+                                    Demonstrated expertise in:
+                                </p>
+                                <div class="grid grid-cols-2 gap-2 mt-3">
+                                    <div class="flex items-start">
+                                        <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                                        <span>Network Fundamentals</span>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                                        <span>IP Connectivity</span>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                                        <span>Network Access</span>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                                        <span>IP Services</span>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                                        <span>Security Fundamentals</span>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                                        <span>Automation & Programmability</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technical Skills with modern styling -->
+            <section class="mb-12">
+                <div class="grid md:grid-cols-3 gap-8 mb-6">
+                    <div class="md:col-span-1">
+                        <h2 class="text-2xl font-bold text-primary section-title pb-2">Technical Skills</h2>
+                    </div>
+                    <div class="md:col-span-2">
+                        <p class="text-gray-700">
+                            Specialized in web development with proficiency in modern frameworks and tools, while also maintaining expertise in networking infrastructure. This dual skill set allows me to create comprehensive digital solutions from front-end design to infrastructure considerations.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+
+                    <!-- Web Development Skills -->
+                    <div class="bg-white p-5 md:p-6 rounded-xl shadow-soft border border-gray-100 hover-card">
+                        <div class="flex items-center mb-4 md:mb-6">
+                            <div
+                                class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-yellow-100 flex items-center justify-center mr-3 md:mr-4">
+                                <i class="fas fa-code text-amber-500"></i>
+                            </div>
+                            <h3 class="text-lg md:text-xl font-semibold text-gray-800">Web Development</h3>
+                        </div>
+                        <div class="space-y-3 md:space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1 md:mb-2 text-xs md:text-sm font-medium">
+                                    <span class="skill-progress-label">HTML/CSS</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-1.5 md:h-2 overflow-hidden">
+                                    <div class="bg-accent h-1.5 md:h-2 rounded-full transition-all duration-1000"
+                                        style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1 md:mb-2 text-xs md:text-sm font-medium">
+                                    <span class="skill-progress-label">JavaScript</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-1.5 md:h-2 overflow-hidden">
+                                    <div class="bg-accent h-1.5 md:h-2 rounded-full transition-all duration-1000"
+                                        style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1 md:mb-2 text-xs md:text-sm font-medium">
+                                    <span class="skill-progress-label">React</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-1.5 md:h-2 overflow-hidden">
+                                    <div class="bg-accent h-1.5 md:h-2 rounded-full transition-all duration-1000"
+                                        style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1 md:mb-2 text-xs md:text-sm font-medium">
+                                    <span class="skill-progress-label">Tailwind CSS</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-1.5 md:h-2 overflow-hidden">
+                                    <div class="bg-accent h-1.5 md:h-2 rounded-full transition-all duration-1000"
+                                        style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Networking Skills -->
+                    <div class="bg-white p-6 rounded-xl shadow-soft border border-gray-100">
+                        <div class="flex items-center mb-6">
+                            <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                                <i class="fas fa-network-wired text-primary"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800">Networking & Infrastructure</h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-2 text-sm font-medium">
+                                    <span>IP Addressing & Subnetting</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2 text-sm font-medium">
+                                    <span>VLAN Configuration</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2 text-sm font-medium">
+                                    <span>Routing Protocols (RIP, OSPF)</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2 text-sm font-medium">
+                                    <span>Network Troubleshooting</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Tools & Platforms -->
+                    <div class="bg-white p-6 rounded-xl shadow-soft border border-gray-100">
+                        <div class="flex items-center mb-6">
+                            <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mr-4">
+                                <i class="fas fa-tools text-green-600"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800">Tools & Platforms</h3>
+                        </div>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="flex items-center bg-gray-50 p-3 rounded-lg">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Cisco Packet Tracer</span>
+                            </div>
+                            <div class="flex items-center bg-gray-50 p-3 rounded-lg">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Wireshark</span>
+                            </div>
+                            <div class="flex items-center bg-gray-50 p-3 rounded-lg">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Git & GitHub</span>
+                            </div>
+                            <div class="flex items-center bg-gray-50 p-3 rounded-lg">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>MySQL</span>
+                            </div>
+                            <div class="flex items-center bg-gray-50 p-3 rounded-lg">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Windows OS</span>
+                            </div>
+                            <div class="flex items-center bg-gray-50 p-3 rounded-lg">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Linux OS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Strengths -->
+                    <div class="bg-white p-6 rounded-xl shadow-soft border border-gray-100">
+                        <div class="flex items-center mb-6">
+                            <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center mr-4">
+                                <i class="fas fa-star text-purple-600"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800">Professional Strengths</h3>
+                        </div>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="flex items-center bg-gray-50 p-3 rounded-lg">
+                                <i class="fas fa-rocket text-purple-500 mr-2"></i>
+                                <span>Fast Learner</span>
+                            </div>
+                            <div class="flex items-center bg-gray-50 p-3 rounded-lg">
+                                <i class="fas fa-puzzle-piece text-purple-500 mr-2"></i>
+                                <span>Problem Solver</span>
+                            </div>
+                            <div class="flex items-center bg-gray-50 p-3 rounded-lg">
+                                <i class="fas fa-comments text-purple-500 mr-2"></i>
+                                <span>Strong Communication</span>
+                            </div>
+                            <div class="flex items-center bg-gray-50 p-3 rounded-lg">
+                                <i class="fas fa-users text-purple-500 mr-2"></i>
+                                <span>Team Collaboration</span>
+                            </div>
+                            <div class="flex items-center bg-gray-50 p-3 rounded-lg">
+                                <i class="fas fa-clock text-purple-500 mr-2"></i>
+                                <span>Time Management</span>
+                            </div>
+                            <div class="flex items-center bg-gray-50 p-3 rounded-lg">
+                                <i class="fas fa-sync text-purple-500 mr-2"></i>
+                                <span>Adaptability</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Profile Summary with modern card -->
+            <section class="mb-12">
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="md:col-span-1">
+                        <h2 class="text-2xl font-bold text-primary section-title pb-2 mb-4">Profile Summary</h2>
+                    </div>
+                    <div class="md:col-span-2">
+                        <div
+                            class="bg-gradient-to-r from-gray-50 to-white p-6 border-l-4 border-primary rounded-lg shadow-soft">
+                            <p class="text-gray-700 leading-relaxed italic">
+                                Web developer with 3+ years of experience creating responsive, user-friendly applications. Skilled in modern front-end technologies including HTML5, CSS3, JavaScript, and React. Complemented by network infrastructure knowledge and CCNA training. Currently pursuing BScIT while actively developing web projects. Passionate about creating clean, efficient code and interested in cybersecurity integration. Quick to learn new technologies with strong problem-solving skills and attention to detail.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Languages and Hobbies in a modern layout -->
+            <section class="mb-6">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-xl shadow-soft border border-gray-100">
+                        <h2 class="text-xl font-bold text-primary mb-6 flex items-center">
+                            <i class="fas fa-language mr-3 text-2xl"></i>Languages
+                        </h2>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span><strong>Nepali</strong> — Native</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 100%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span><strong>English</strong> — Proficient</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-soft border border-gray-100">
+                        <h2 class="text-xl font-bold text-primary mb-6 flex items-center">
+                            <i class="fas fa-heart mr-3 text-2xl"></i>Hobbies & Interests
+                        </h2>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="flex items-center bg-gray-50 p-3 rounded-lg">
+                                <i class="fas fa-music text-primary mr-3"></i>
+                                <span>Listening to Music</span>
+                            </div>
+                            <div class="flex items-center bg-gray-50 p-3 rounded-lg">
+                                <i class="fas fa-gamepad text-primary mr-3"></i>
+                                <span>Gaming</span>
+                            </div>
+                            <div class="flex items-center bg-gray-50 p-3 rounded-lg">
+                                <i class="fas fa-plane text-primary mr-3"></i>
+                                <span>Traveling</span>
+                            </div>
+                            <div class="flex items-center bg-gray-50 p-3 rounded-lg">
+                                <i class="fas fa-book text-primary mr-3"></i>
+                                <span>Reading Books</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer with professional touch -->
+        <footer class="bg-gradient-to-r from-gray-50 to-gray-100 p-4 md:p-6 text-center border-t border-gray-200">
+            <div class="flex flex-col md:flex-row items-center justify-center space-y-2 md:space-y-0 md:space-x-4">
+                <span class="font-medium text-gray-700">© 2025 Dhruba Khadka</span>
+                <span class="hidden md:inline text-gray-400">•</span>
+                <a href="mailto:dhrubakd53@gmail.com"
+                    class="text-primary hover:underline hover:text-secondary transition-colors duration-300">dhrubakd53@gmail.com</a>
+                <span class="hidden md:inline text-gray-400">•</span>
+                <span class="text-gray-700">+977 9861696726</span>
+            </div>
+            <div class="mt-2 text-xs text-gray-500">
+                Web Developer & Network Engineer | Kathmandu, Nepal
+            </div>
+        </footer>
+    </div>
+
+    <!-- Print and Download Buttons -->
+    <div class="fixed bottom-8 right-8 flex space-x-4 print-hide z-50">
+        <button onclick="window.print()"
+            class="bg-primary hover:bg-secondary text-white px-4 md:px-6 py-2 md:py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-300 flex items-center text-sm md:text-base">
+            <i class="fas fa-print mr-2"></i>
+            Print Resume
+        </button>
+    </div>
+</body>
+
+</html>

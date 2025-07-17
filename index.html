@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhruba Khadka | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        body: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#1E40AF',
+                        dark: {
+                            DEFAULT: '#1F2937',
+                            lighter: '#374151',
+                            darker: '#111827'
+                        },
+                        light: {
+                            DEFAULT: '#F9FAFB',
+                            darker: '#F3F4F6'
+                        }
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-in-out',
+                        'slide-up': 'slideUp 0.5s ease-out',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    boxShadow: {
+                        'elegant': '0 0 15px rgba(0, 0, 0, 0.1)',
+                        'elegant-dark': '0 0 15px rgba(0, 0, 0, 0.2)',
+                    }
+                }
+            }
+        }
+    </script>
+
+
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add after your existing scripts -->
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+</head>
+
+<body
+    class="bg-light dark:bg-dark-darker text-dark dark:text-light font-sans w-full max-w-5xl mx-auto transition-colors duration-200">
+    <!-- Navigation -->
+    <nav class="fixed w-full max-w-5xl bg-white dark:bg-dark  z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-primary font-heading">DK</a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#home"
+                    class="nav-link hover:text-primary transition dark:text-gray-200 dark:hover:text-primary">Home</a>
+                <a href="#about"
+                    class="nav-link hover:text-primary transition dark:text-gray-200 dark:hover:text-primary">About</a>
+                <a href="#skills"
+                    class="nav-link hover:text-primary transition dark:text-gray-200 dark:hover:text-primary">Skills</a>
+                <a href="#projects"
+                    class="nav-link hover:text-primary transition dark:text-gray-200 dark:hover:text-primary">Projects</a>
+                <a href="#contact"
+                    class="nav-link hover:text-primary transition dark:text-gray-200 dark:hover:text-primary">Contact</a>
+                <button id="theme-toggle"
+                    class="p-2 w-10 h-10 rounded-full hover:bg-gray-100 dark:hover:bg-dark-lighter transition dark:text-gray-200">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                </button>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none dark:text-gray-200">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-dark py-2 px-4 shadow-lg">
+            <a href="#home" class="block py-2 nav-link hover:text-primary transition dark:text-gray-200">Home</a>
+            <a href="#about" class="block py-2 nav-link hover:text-primary transition dark:text-gray-200">About</a>
+            <a href="#skills" class="block py-2 nav-link hover:text-primary transition dark:text-gray-200">Skills</a>
+            <a href="#projects"
+                class="block py-2 nav-link hover:text-primary transition dark:text-gray-200">Projects</a>
+            <a href="#contact" class="block py-2 nav-link hover:text-primary transition dark:text-gray-200">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home"
+        class="min-h-screen flex items-center pt-16 bg-gradient-to-tr from-blue-50 via-light to-indigo-50 dark:from-dark-darker dark:via-dark dark:to-indigo-950 overflow-hidden">
+        <div class="container mx-auto px-6 py-20">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 z-10">
+                    <span
+                        class="inline-block px-3 py-1 bg-blue-100 dark:bg-blue-900 text-primary dark:text-blue-300 rounded-full text-sm font-medium mb-4 animate-fade-up">
+                        <span class="flex items-center">
+                            <span class="w-2 h-2 bg-primary dark:bg-blue-300 rounded-full mr-2 animate-pulse"></span>
+                            Available for Freelance Work
+                        </span>
+                    </span>
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4 font-heading opacity-0 animate-slide-right">
+                        Hello, I'm  <br><span class="text-primary relative inline-block">
+                            <span id="typing-name"></span>
+                            <span class="absolute -bottom-2 left-0 w-full h-1 bg-primary/30 rounded"></span>
+                        </span>
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold mb-6 opacity-0 animate-slide-right delay-200">
+                        <span id="typing-role" class="text-gray-700 dark:text-gray-300"></span>
+                    </h2>
+                    <p class="text-lg mb-8 text-gray-600 dark:text-gray-400 opacity-0 animate-slide-right delay-400 max-w-lg"
+                        id="typing-desc">
+                    </p>
+                    <div class="flex flex-wrap gap-4 opacity-0 animate-fade-up delay-600">
+                        <a href="#projects"
+                            class="bg-primary hover:bg-secondary text-white px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center">
+                            <span>View Work</span>
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                        <a href="#contact"
+                            class="group border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-lg transition-all duration-300">
+                            <span class="group-hover:mr-2">Contact Me</span>
+                            <i class="fas fa-envelope ml-1 group-hover:ml-2 transition-all"></i>
+                        </a>
+                    </div>
+
+                    <!-- Social Media Icons -->
+                    <div class="mt-10 opacity-0 animate-fade-up delay-800">
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">Follow me on:</p>
+                        <div class="flex space-x-5">
+                            <a href="#"
+                                class="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">
+                                <i class="fab fa-github text-xl"></i>
+                            </a>
+                            <a href="#"
+                                class="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">
+                                <i class="fab fa-linkedin-in text-xl"></i>
+                            </a>
+                            <a href="#"
+                                class="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">
+                                <i class="fab fa-twitter text-xl"></i>
+                            </a>
+                            <a href="#"
+                                class="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">
+                                <i class="fab fa-instagram text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center relative">
+                    <div class="relative z-10 opacity-0 animate-slide-left delay-200">
+                        <div
+                            class="absolute -inset-4 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-full blur-lg">
+                        </div>
+                        <img src="dhruba.jpg" alt="Profile"
+                            class="rounded-full w-64 h-64 md:w-80 md:h-80 object-cover shadow-xl animate-float relative z-10 border-4 border-white dark:border-dark">
+                    </div>
+
+                    <!-- Decorative elements -->
+                    <div
+                        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] rounded-full border-2 border-dashed border-primary/20 animate-spin-slow">
+                    </div>
+                    <div
+                        class="absolute top-0 right-10 w-20 h-20 bg-blue-400/10 dark:bg-blue-400/5 rounded-full animate-float delay-100">
+                    </div>
+                    <div class="absolute bottom-10 left-0 w-10 h-10 bg-primary/10 rounded-full animate-float delay-300">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50 dark:bg-dark overflow-hidden ">
+
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col items-center mb-16">
+                <span
+                    class="inline-block px-3 py-1 bg-blue-100 dark:bg-blue-900 text-primary dark:text-blue-300 rounded-full text-sm font-medium mb-3">About
+                    Me</span>
+                <h2 class="text-3xl font-bold text-center font-heading relative">
+                    Know Me <span class="text-primary">Better</span>
+                    <span
+                        class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-primary/30 rounded"></span>
+                </h2>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-10 md:mb-0 scroll-fade-right">
+                    <div class="relative">
+                        <div
+                            class="absolute -inset-4 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-lg blur-lg transform -rotate-3">
+                        </div>
+                        <img src="dhruba.jpg" alt="About"
+                            class="rounded-lg shadow-xl relative z-10 transform hover:rotate-3 transition-transform duration-500">
+
+                        <!-- Experience badge -->
+                        <div
+                            class="absolute -bottom-5 -right-5 bg-primary text-white rounded-full w-24 h-24 flex flex-col items-center justify-center shadow-lg z-20 animate-pulse-slow hover:scale-110 transition-transform duration-300 cursor-pointer">
+                            <span class="text-2xl font-bold animate-float">5+</span>
+                            <span class="text-xs">Years Exp.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:w-2/3 md:pl-12">
+
+                    <h3 class="text-2xl font-semibold mb-6 relative inline-block">
+                        Frontend Developer & UI/UX Designer
+                        <span class="absolute -bottom-1 left-0 w-full h-1 bg-primary/30 rounded"></span>
+                    </h3>
+
+                    <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">Hello! I'm Dhruba, a passionate
+                        frontend developer with 5+ years of experience creating responsive and user-friendly websites. I
+                        transform complex problems into elegant, intuitive interfaces that users love.</p>
+
+                    <p class="text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">My journey in web development began
+                        during college, where I discovered my passion for creating digital experiences. Since then, I've
+                        collaborated with startups and established companies alike, bringing their visions to life with
+                        clean code and beautiful designs.</p>
+
+                    <!-- Personal details with improved styling -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <div>
+
+                            <p class="flex items-center mb-3">
+                                <span class="text-primary mr-2"><i class="fas fa-user"></i></span>
+                                <span class="font-semibold mr-2">Name:</span>
+                                <span class="text-gray-600 dark:text-gray-300">Dhruba Khadka</span>
+                            </p>
+                            <p class="flex items-center mb-3">
+                                <span class="text-primary mr-2"><i class="fas fa-envelope"></i></span>
+                                <span class="font-semibold mr-2">Email:</span>
+                                <span class="text-gray-600 dark:text-gray-300">dhrubakd53@gmail.com</span>
+                            </p>
+                            <p class="flex items-center">
+                                <span class="text-primary mr-2"><i class="fas fa-calendar"></i></span>
+                                <span class="font-semibold mr-2">Age:</span>
+                                <span class="text-gray-600 dark:text-gray-300">28 Years</span>
+                            </p>
+                        </div>
+                        <div>
+                            <p class="flex items-center mb-3">
+                                <span class="text-primary mr-2"><i class="fas fa-map-marker-alt"></i></span>
+                                <span class="font-semibold mr-2">From:</span>
+                                <span class="text-gray-600 dark:text-gray-300">Kathmandu, Nepal</span>
+                            </p>
+                            <p class="flex items-center mb-3">
+                                <span class="text-primary mr-2"><i class="fas fa-phone"></i></span>
+                                <span class="font-semibold mr-2">Phone:</span>
+                                <span class="text-gray-600 dark:text-gray-300">+977 9861696726</span>
+                            </p>
+                            <p class="flex items-center">
+                                <span class="text-primary mr-2"><i class="fas fa-briefcase"></i></span>
+                                <span class="font-semibold mr-2">Freelance:</span>
+                                <span class="text-green-500 dark:text-green-400">Available</span>
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <!-- Call to action buttons -->
+                    <div class="flex flex-wrap gap-4">
+                        <a href="cv-premium.html" target="_blank" rel="noopener noreferrer"
+                            class="bg-primary hover:bg-secondary text-white px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-md flex items-center justify-center space-x-2">
+                            <i class="fas fa-file-alt mr-2"></i>
+                            <span>View Resume</span>
+                        </a>
+                        <a href="#contact"
+                            class="border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-lg transition-all duration-300 flex items-center justify-center">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            <span>Hire Me</span>
+                        </a>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Decorative elements -->
+            <div class="relative overflow-hidden">
+                <div
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] rounded-full border-2 border-dashed border-primary/20 animate-spin-slow">
+                </div>
+                <div
+                    class="absolute top-0 right-10 w-20 h-20 bg-blue-400/10 dark:bg-blue-400/5 rounded-full animate-float delay-100">
+                </div>
+                <div class="absolute bottom-10 left-0 w-10 h-10 bg-primary/10 rounded-full animate-float delay-300">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section (Add after About Section) -->
+    <section class="py-16 bg-gradient-to-r from-primary/5 to-secondary/5 dark:from-primary/10 dark:to-secondary/10">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center p-6 rounded-lg bg-white/50 dark:bg-dark/50 backdrop-blur-sm shadow-sm">
+                    <div class="text-4xl font-bold text-primary mb-2 counter" data-target="5">0</div>
+                    <div class="text-gray-600 dark:text-gray-400 font-medium">Years Experience</div>
+                </div>
+                <div class="text-center p-6 rounded-lg bg-white/50 dark:bg-dark/50 backdrop-blur-sm shadow-sm">
+                    <div class="text-4xl font-bold text-primary mb-2 counter" data-target="50">0</div>
+                    <div class="text-gray-600 dark:text-gray-400 font-medium">Projects Completed</div>
+                </div>
+                <div class="text-center p-6 rounded-lg bg-white/50 dark:bg-dark/50 backdrop-blur-sm shadow-sm">
+                    <div class="text-4xl font-bold text-primary mb-2 counter" data-target="25">0</div>
+                    <div class="text-gray-600 dark:text-gray-400 font-medium">Happy Clients</div>
+                </div>
+                <div class="text-center p-6 rounded-lg bg-white/50 dark:bg-dark/50 backdrop-blur-sm shadow-sm">
+                    <div class="text-4xl font-bold text-primary mb-2 counter" data-target="10">0</div>
+                    <div class="text-gray-600 dark:text-gray-400 font-medium">Awards Received</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">My <span class="text-primary">Skills</span></h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-xl font-semibold mb-6">Coding Skills</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>HTML/CSS</span>
+                                <span>95%</span>
+                            </div>
+                            <div
+                                class="w-full bg-gray-200 dark:bg-dark-lighter rounded-full h-2.5 overflow-hidden scroll-fade-right">
+                                <div class="bg-primary h-2.5 rounded-full skill-bar transition-all duration-1000"
+                                    data-width="95"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>JavaScript</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-dark-lighter rounded-full h-2.5 overflow-hidden">
+                                <div class="bg-primary h-2.5 rounded-full skill-bar transition-all duration-500"
+                                    data-width="90"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>React</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-dark-lighter rounded-full h-2.5 overflow-hidden">
+                                <div class="bg-primary h-2.5 rounded-full skill-bar transition-all duration-500"
+                                    data-width="85"></div>
+                            </div>
+                        </div>
+                         <div>
+                            <div class="flex justify-between mb-2">
+                                <span>PHP</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-dark-lighter rounded-full h-2.5 overflow-hidden">
+                                <div class="bg-primary h-2.5 rounded-full skill-bar transition-all duration-500"
+                                    data-width="80"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>Node.js</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-dark-lighter rounded-full h-2.5 overflow-hidden">
+                                <div class="bg-primary h-2.5 rounded-full skill-bar transition-all duration-500"
+                                    data-width="75"></div>
+                            </div>
+                        </div>
+                         <div>
+                            <div class="flex justify-between mb-2">
+                                <span>MySQL</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-dark-lighter rounded-full h-2.5 overflow-hidden">
+                                <div class="bg-primary h-2.5 rounded-full skill-bar transition-all duration-500"
+                                    data-width="70"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-6">Professional Skills</h3>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div
+                            class="bg-white dark:bg-dark p-6 rounded-lg shadow-md text-center hover:shadow-lg transition animate-slide-up">
+                            <div class="text-primary text-4xl mb-4">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <h4 class="font-semibold mb-2 dark:text-gray-200">Creative Design</h4>
+                            <p class="text-gray-600 dark:text-gray-400">Creating visually appealing interfaces</p>
+                        </div>
+                        <div
+                            class="bg-white dark:bg-dark p-6 rounded-lg shadow-md text-center hover:shadow-lg transition animate-slide-up">
+                            <div class="text-primary text-4xl mb-4">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h4 class="font-semibold mb-2">Clean Code</h4>
+                            <p class="text-gray-600 dark:text-gray-400">Writing maintainable and efficient code</p>
+                        </div>
+                        <div
+                            class="bg-white dark:bg-dark p-6 rounded-lg shadow-md text-center hover:shadow-lg transition animate-slide-up">
+                            <div class="text-primary text-4xl mb-4">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h4 class="font-semibold mb-2">Responsive</h4>
+                            <p class="text-gray-600 dark:text-gray-400">Perfect on all device sizes</p>
+                        </div>
+                        <div
+                            class="bg-white dark:bg-dark p-6 rounded-lg shadow-md text-center hover:shadow-lg transition animate-slide-up">
+                            <div class="text-primary text-4xl mb-4">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <h4 class="font-semibold mb-2">Fast Delivery</h4>
+                            <p class="text-gray-600 dark:text-gray-400">Quick turnaround times</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Decorative elements -->
+            <div class="relative overflow-hidden">
+                <div
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] rounded-full border-2 border-dashed border-primary/20 animate-spin-slow">
+                </div>
+                <div
+                    class="absolute top-0 right-10 w-20 h-20 bg-blue-400/10 dark:bg-blue-400/5 rounded-full animate-float delay-100">
+                </div>
+                <div class="absolute bottom-10 left-0 w-10 h-10 bg-primary/10 rounded-full animate-float delay-300">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Education Section (Add after Skills Section) -->
+    <section class="py-20 bg-white dark:bg-dark-darker overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col items-center mb-16">
+                <span
+                    class="inline-block px-3 py-1 bg-blue-100 dark:bg-blue-900 text-primary dark:text-blue-300 rounded-full text-sm font-medium mb-3">Resume</span>
+                <h2 class="text-3xl font-bold text-center font-heading relative">
+                    My <span class="text-primary">Journey</span>
+                    <span
+                        class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-primary/30 rounded"></span>
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Experience Timeline -->
+                <div>
+                    <div class="flex items-center mb-8">
+                        <div class="text-primary text-2xl mr-3">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold">Work Experience</h3>
+                    </div>
+
+                    <div class="relative border-l-2 border-primary/20 pl-8 space-y-10 ml-3">
+                        <!-- Job 1 -->
+                        <div class="relative scroll-fade-right">
+                            <div
+                                class="absolute -left-10 mt-1 w-6 h-6 rounded-full border-2 border-primary bg-white dark:bg-dark flex items-center justify-center">
+                                <div class="w-2 h-2 bg-primary rounded-full"></div>
+                            </div>
+                            <div
+                                class="bg-gray-50 dark:bg-dark p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                                <span
+                                    class="inline-block px-3 py-1 bg-primary/10 dark:bg-primary/20 text-primary rounded text-sm font-medium mb-2">2021
+                                    - Present</span>
+                                <h4 class="text-xl font-semibold mb-2">Senior Frontend Developer</h4>
+                                <p class="text-gray-500 dark:text-gray-400 mb-3">TechCorp Inc.</p>
+                                <p class="text-gray-600 dark:text-gray-300">Led frontend development for major client
+                                    projects, implemented responsive design principles, and mentored junior developers.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Job 2 -->
+                        <div class="relative scroll-fade-right">
+                            <div
+                                class="absolute -left-10 mt-1 w-6 h-6 rounded-full border-2 border-primary bg-white dark:bg-dark flex items-center justify-center">
+                                <div class="w-2 h-2 bg-primary rounded-full"></div>
+                            </div>
+                            <div
+                                class="bg-gray-50 dark:bg-dark p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                                <span
+                                    class="inline-block px-3 py-1 bg-primary/10 dark:bg-primary/20 text-primary rounded text-sm font-medium mb-2">2019
+                                    - 2021</span>
+                                <h4 class="text-xl font-semibold mb-2">Frontend Developer</h4>
+                                <p class="text-gray-500 dark:text-gray-400 mb-3">WebSolutions Ltd.</p>
+                                <p class="text-gray-600 dark:text-gray-300">Developed and maintained client websites,
+                                    collaborated with designers to implement modern UI concepts, and optimized site
+                                    performance.</p>
+                            </div>
+                        </div>
+
+                        <!-- Job 3 -->
+                        <div class="relative scroll-fade-right">
+                            <div
+                                class="absolute -left-10 mt-1 w-6 h-6 rounded-full border-2 border-primary bg-white dark:bg-dark flex items-center justify-center">
+                                <div class="w-2 h-2 bg-primary rounded-full"></div>
+                            </div>
+                            <div
+                                class="bg-gray-50 dark:bg-dark p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                                <span
+                                    class="inline-block px-3 py-1 bg-primary/10 dark:bg-primary/20 text-primary rounded text-sm font-medium mb-2">2018
+                                    - 2019</span>
+                                <h4 class="text-xl font-semibold mb-2">Web Developer Intern</h4>
+                                <p class="text-gray-500 dark:text-gray-400 mb-3">Digital Creations</p>
+                                <p class="text-gray-600 dark:text-gray-300">Assisted senior developers in building
+                                    websites, learned modern development practices, and contributed to company projects.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education Timeline -->
+                <div>
+                    <div class="flex items-center mb-8">
+                        <div class="text-primary text-2xl mr-3">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold">Education</h3>
+                    </div>
+
+                    <div class="relative border-l-2 border-primary/20 pl-8 space-y-10 ml-3">
+                        <!-- Education 1 -->
+                        <div class="relative scroll-fade-left">
+                            <div
+                                class="absolute -left-10 mt-1 w-6 h-6 rounded-full border-2 border-primary bg-white dark:bg-dark flex items-center justify-center">
+                                <div class="w-2 h-2 bg-primary rounded-full"></div>
+                            </div>
+                            <div
+                                class="bg-gray-50 dark:bg-dark p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                                <span
+                                    class="inline-block px-3 py-1 bg-primary/10 dark:bg-primary/20 text-primary rounded text-sm font-medium mb-2">2015
+                                    - 2019</span>
+                                <h4 class="text-xl font-semibold mb-2">Bachelor's in Computer Science</h4>
+                                <p class="text-gray-500 dark:text-gray-400 mb-3">Tribhuvan University</p>
+                                <p class="text-gray-600 dark:text-gray-300">Specialized in web technologies and software
+                                    development with a minor in digital design.</p>
+                            </div>
+                        </div>
+
+                        <!-- Education 2 -->
+                        <div class="relative scroll-fade-left">
+                            <div
+                                class="absolute -left-10 mt-1 w-6 h-6 rounded-full border-2 border-primary bg-white dark:bg-dark flex items-center justify-center">
+                                <div class="w-2 h-2 bg-primary rounded-full"></div>
+                            </div>
+                            <div
+                                class="bg-gray-50 dark:bg-dark p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                                <span
+                                    class="inline-block px-3 py-1 bg-primary/10 dark:bg-primary/20 text-primary rounded text-sm font-medium mb-2">2020</span>
+                                <h4 class="text-xl font-semibold mb-2">UI/UX Design Certification</h4>
+                                <p class="text-gray-500 dark:text-gray-400 mb-3">DesignAcademy Online</p>
+                                <p class="text-gray-600 dark:text-gray-300">Completed intensive training in user
+                                    interface design, user experience principles, and prototyping.</p>
+                            </div>
+                        </div>
+
+                        <!-- Education 3 -->
+                        <div class="relative scroll-fade-left">
+                            <div
+                                class="absolute -left-10 mt-1 w-6 h-6 rounded-full border-2 border-primary bg-white dark:bg-dark flex items-center justify-center">
+                                <div class="w-2 h-2 bg-primary rounded-full"></div>
+                            </div>
+                            <div
+                                class="bg-gray-50 dark:bg-dark p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                                <span
+                                    class="inline-block px-3 py-1 bg-primary/10 dark:bg-primary/20 text-primary rounded text-sm font-medium mb-2">2022</span>
+                                <h4 class="text-xl font-semibold mb-2">Advanced React Development</h4>
+                                <p class="text-gray-500 dark:text-gray-400 mb-3">Frontend Masters</p>
+                                <p class="text-gray-600 dark:text-gray-300">Mastered advanced React concepts including
+                                    hooks, context API, performance optimization, and state management.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Decorative elements -->
+            <div class="relative overflow-hidden">
+                <div
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] rounded-full border-2 border-dashed border-primary/20 animate-spin-slow">
+                </div>
+                <div
+                    class="absolute top-0 right-10 w-20 h-20 bg-blue-400/10 dark:bg-blue-400/5 rounded-full animate-float delay-100">
+                </div>
+                <div class="absolute bottom-10 left-0 w-10 h-10 bg-primary/10 rounded-full animate-float delay-300">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section py-20 bg-gray-50 dark:bg-dark-lighter overflow-hidden -->
+    <section id="projects" class="py-20  dark:bg-dark-lighter overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col items-center mb-16">
+                <span
+                    class="inline-block px-3 py-1 bg-blue-100 dark:bg-blue-900 text-primary dark:text-blue-300 rounded-full text-sm font-medium mb-3">Portfolio</span>
+                <h2 class="text-3xl font-bold text-center font-heading relative">
+                    Featured <span class="text-primary">Projects</span>
+                    <span
+                        class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-primary/30 rounded"></span>
+                </h2>
+                <p class="text-gray-600 dark:text-gray-400 text-center max-w-xl mt-4">
+                    Here are some of my recent projects. Each one was carefully crafted with attention to detail and
+                    modern web practices.
+                </p>
+            </div>
+
+            <!-- Improved filter buttons -->
+            <div class="flex justify-center mb-12">
+                <div class="inline-flex rounded-full shadow-sm bg-gray-100 dark:bg-dark p-1">
+                    <button type="button"
+                        class="project-filter px-6 py-2 text-sm font-medium rounded-full bg-primary text-white transition-all duration-300"
+                        data-filter="all">
+                        All
+                    </button>
+                    <button type="button"
+                        class="project-filter px-6 py-2 text-sm font-medium rounded-full text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-dark-lighter transition-all duration-300"
+                        data-filter="web">
+                        Web
+                    </button>
+                    <button type="button"
+                        class="project-filter px-6 py-2 text-sm font-medium rounded-full text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-dark-lighter transition-all duration-300"
+                        data-filter="mobile">
+                        Mobile
+                    </button>
+                    <button type="button"
+                        class="project-filter px-6 py-2 text-sm font-medium rounded-full text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-dark-lighter transition-all duration-300"
+                        data-filter="design">
+                        Design
+                    </button>
+                </div>
+            </div>
+
+            <!-- Improved project cards -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-item group relative bg-white dark:bg-dark rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 animate-slide-up scroll-scale"
+                    data-category="web">
+                    <div class="relative overflow-hidden">
+                        <img src="dhruba.jpg" alt="Project 1"
+                            class="w-full h-56 object-cover group-hover:scale-110 transition-all duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                            <div class="p-4 w-full">
+                                <div class="flex space-x-2 mb-2">
+                                    <a href="#"
+                                        class="bg-primary hover:bg-secondary text-white p-2 rounded-full transition-colors">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                    <a href="#"
+                                        class="bg-white text-dark p-2 rounded-full transition-colors hover:bg-gray-100">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold dark:text-gray-200">E-commerce Website</h3>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Web</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">A full-featured online store with cart
+                            functionality and payment integration.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">React</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Node.js</span>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more enhanced project cards similarly -->
+                <!-- Project 2 -->
+                <div class="project-item group relative bg-white dark:bg-dark rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 animate-slide-up scroll-scale"
+                    data-category="web">
+                    <div class="relative overflow-hidden">
+                        <img src="dhruba.jpg" alt="Project 2"
+                            class="w-full h-56 object-cover group-hover:scale-110 transition-all duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                            <div class="p-4 w-full">
+                                <div class="flex space-x-2 mb-2">
+                                    <a href="#"
+                                        class="bg-primary hover:bg-secondary text-white p-2 rounded-full transition-colors">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                    <a href="#"
+                                        class="bg-white text-dark p-2 rounded-full transition-colors hover:bg-gray-100">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold dark:text-gray-200">Portfolio Website</h3>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Web</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">A modern portfolio website with smooth
+                            animations and responsive design.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">React</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">TailwindCSS</span>
+                            <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded">GSAP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-item group relative bg-white dark:bg-dark rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 animate-slide-up scroll-scale"
+                    data-category="mobile">
+                    <div class="relative overflow-hidden">
+                        <img src="dhruba.jpg" alt="Project 3"
+                            class="w-full h-56 object-cover group-hover:scale-110 transition-all duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                            <div class="p-4 w-full">
+                                <div class="flex space-x-2 mb-2">
+                                    <a href="#"
+                                        class="bg-primary hover:bg-secondary text-white p-2 rounded-full transition-colors">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                    <a href="#"
+                                        class="bg-white text-dark p-2 rounded-full transition-colors hover:bg-gray-100">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold dark:text-gray-200">Food Delivery App</h3>
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Mobile</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">A mobile app for ordering food with real-time
+                            tracking and payment integration.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-cyan-100 text-cyan-800 text-xs px-2 py-1 rounded">React Native</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Firebase</span>
+                            <span class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded">Redux</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-item group relative bg-white dark:bg-dark rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 animate-slide-up scroll-scale"
+                    data-category="design">
+                    <div class="relative overflow-hidden">
+                        <img src="dhruba.jpg" alt="Project 4"
+                            class="w-full h-56 object-cover group-hover:scale-110 transition-all duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                            <div class="p-4 w-full">
+                                <div class="flex space-x-2 mb-2">
+                                    <a href="#"
+                                        class="bg-primary hover:bg-secondary text-white p-2 rounded-full transition-colors">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                    <a href="#"
+                                        class="bg-white text-dark p-2 rounded-full transition-colors hover:bg-gray-100">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold dark:text-gray-200">Brand Identity Design</h3>
+                            <span class="bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full">Design</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Complete brand identity package for a tech
+                            startup including logo, colors, and typography.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">Figma</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Illustrator</span>
+                            <span class="bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded">Photoshop</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-item group relative bg-white dark:bg-dark rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 animate-slide-up scroll-scale"
+                    data-category="web">
+                    <div class="relative overflow-hidden">
+                        <img src="dhruba.jpg" alt="Project 5"
+                            class="w-full h-56 object-cover group-hover:scale-110 transition-all duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                            <div class="p-4 w-full">
+                                <div class="flex space-x-2 mb-2">
+                                    <a href="#"
+                                        class="bg-primary hover:bg-secondary text-white p-2 rounded-full transition-colors">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                    <a href="#"
+                                        class="bg-white text-dark p-2 rounded-full transition-colors hover:bg-gray-100">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold dark:text-gray-200">Dashboard UI</h3>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Web</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Admin dashboard with interactive charts, user
+                            management, and dark mode support.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Vue.js</span>
+                            <span class="bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded">Chart.js</span>
+                            <span class="bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded">REST API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-item group relative bg-white dark:bg-dark rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 animate-slide-up scroll-scale"
+                    data-category="mobile">
+                    <div class="relative overflow-hidden">
+                        <img src="dhruba.jpg" alt="Project 6"
+                            class="w-full h-56 object-cover group-hover:scale-110 transition-all duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                            <div class="p-4 w-full">
+                                <div class="flex space-x-2 mb-2">
+                                    <a href="#"
+                                        class="bg-primary hover:bg-secondary text-white p-2 rounded-full transition-colors">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                    <a href="#"
+                                        class="bg-white text-dark p-2 rounded-full transition-colors hover:bg-gray-100">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold dark:text-gray-200">Fitness Tracker</h3>
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Mobile</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Mobile app for tracking workouts, nutrition,
+                            and setting fitness goals with progress charts.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Flutter</span>
+                            <span class="bg-sky-100 text-sky-800 text-xs px-2 py-1 rounded">Firebase</span>
+                            <span class="bg-rose-100 text-rose-800 text-xs px-2 py-1 rounded">BLoC</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- View All Projects Button -->
+            <div class="flex justify-center mt-12">
+                <a href="#"
+                    class="group flex items-center bg-white dark:bg-dark hover:bg-primary dark:hover:bg-primary text-primary hover:text-white dark:text-gray-200 dark:hover:text-white px-6 py-3 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border-2 border-primary">
+                    <span>View All Projects</span>
+                    <i class="fas fa-arrow-right ml-2 group-hover:ml-3 transition-all"></i>
+                </a>
+            </div>
+
+            <!-- Decorative elements -->
+            <div class="relative overflow-hidden">
+                <div
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] rounded-full border-2 border-dashed border-primary/20 animate-spin-slow">
+                </div>
+                <div
+                    class="absolute top-0 right-10 w-20 h-20 bg-blue-400/10 dark:bg-blue-400/5 rounded-full animate-float delay-100">
+                </div>
+                <div class="absolute bottom-10 left-0 w-10 h-10 bg-primary/10 rounded-full animate-float delay-300">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section (Add after Projects Section) py-20 bg-white dark:bg-dark-darker overflow-hidden-->
+    <section class="py-20 bg-white dark:bg-dark-darker overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col items-center mb-16">
+                <span
+                    class="inline-block px-3 py-1 bg-blue-100 dark:bg-blue-900 text-primary dark:text-blue-300 rounded-full text-sm font-medium mb-3">Testimonials</span>
+                <h2 class="text-3xl font-bold text-center font-heading relative">
+                    Client <span class="text-primary">Feedback</span>
+                    <span
+                        class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-primary/30 rounded"></span>
+                </h2>
+                <p class="text-gray-600 dark:text-gray-400 text-center max-w-xl mt-4">
+                    Here's what some of my clients have to say about working with me.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div
+                    class="bg-gray-50 dark:bg-dark p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow relative scroll-fade-up">
+                    <!-- Quote icon -->
+                    <div class="absolute top-4 right-4 text-primary/10 text-5xl">
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+
+                    <!-- Stars -->
+                    <div class="flex mb-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+
+                    <!-- Testimonial text -->
+                    <p class="text-gray-600 dark:text-gray-300 mb-6 relative z-10">
+                        "Dhruba delivered an exceptional website that exceeded our expectations. His attention to detail
+                        and ability to understand our requirements made the process smooth and enjoyable."
+                    </p>
+
+                    <!-- Client info -->
+                    <div class="flex items-center">
+                        <img src="dhruba.jpg" alt="Client" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-semibold dark:text-gray-200">Sarah Johnson</h4>
+                            <p class="text-gray-500 dark:text-gray-400 text-sm">CEO, TechStart</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add these after your first testimonial -->
+
+                <!-- Testimonial 2 -->
+                <div
+                    class="bg-gray-50 dark:bg-dark p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow relative scroll-fade-up">
+                    <!-- Quote icon -->
+                    <div class="absolute top-4 right-4 text-primary/10 text-5xl">
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+
+                    <!-- Stars -->
+                    <div class="flex mb-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+
+                    <!-- Testimonial text -->
+                    <p class="text-gray-600 dark:text-gray-300 mb-6 relative z-10">
+                        "Working with Dhruba was an absolute pleasure. His technical expertise and creative approach
+                        transformed our outdated website into a modern, user-friendly platform that's driving real
+                        results for our business."
+                    </p>
+
+                    <!-- Client info -->
+                    <div class="flex items-center">
+                        <img src="dhruba.jpg" alt="Client" class="w-16 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-semibold dark:text-gray-200">Michael Roberts</h4>
+                            <p class="text-gray-500 dark:text-gray-400 text-sm">Marketing Director, InnovateCorp</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div
+                    class="bg-gray-50 dark:bg-dark p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow relative scroll-fade-up">
+                    <!-- Quote icon -->
+                    <div class="absolute top-4 right-4 text-primary/10 text-5xl">
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+
+                    <!-- Stars -->
+                    <div class="flex mb-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+
+                    <!-- Testimonial text -->
+                    <p class="text-gray-600 dark:text-gray-300 mb-6 relative z-10">
+                        "Dhruba's ability to translate our complex requirements into an intuitive interface was
+                        impressive. He consistently delivered ahead of schedule and was always responsive to our
+                        feedback. I highly recommend his services."
+                    </p>
+
+                    <!-- Client info -->
+                    <div class="flex items-center">
+                        <img src="dhruba.jpg" alt="Client" class="w-16 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-semibold dark:text-gray-200">Emily Chen</h4>
+                            <p class="text-gray-500 dark:text-gray-400 text-sm">Product Manager, TechSolutions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Decorative elements -->
+            <div class="relative overflow-hidden">
+                <div
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] rounded-full border-2 border-dashed border-primary/20 animate-spin-slow">
+                </div>
+                <div
+                    class="absolute top-0 right-10 w-20 h-20 bg-blue-400/10 dark:bg-blue-400/5 rounded-full animate-float delay-100">
+                </div>
+                <div class="absolute bottom-10 left-0 w-10 h-10 bg-primary/10 rounded-full animate-float delay-300">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section py-20 bg-gray-50 dark:bg-dark-lighter overflow-hidden-->
+    <section id="contact" class="py-20 dark:bg-dark overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col items-center mb-16">
+                <span
+                    class="inline-block px-3 py-1 bg-blue-100 dark:bg-blue-900 text-primary dark:text-blue-300 rounded-full text-sm font-medium mb-3">Contact</span>
+                <h2 class="text-3xl font-bold text-center font-heading relative">
+                    Get In <span class="text-primary">Touch</span>
+                    <span
+                        class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-primary/30 rounded"></span>
+                </h2>
+                <p class="text-gray-600 dark:text-gray-400 text-center max-w-xl mt-4">
+                    Feel free to contact me for any questions or opportunities. I'll get back to you as soon as
+                    possible.
+                </p>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-start">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <div class="bg-white dark:bg-dark p-8 rounded-xl shadow-md mb-8 scroll-fade-right">
+                        <h3 class="text-2xl font-semibold mb-6 text-center md:text-left">Contact Information</h3>
+
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-primary/10 dark:bg-primary/20 p-3 rounded-full text-primary mr-4">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Location</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">Kathmandu, Nepal</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="bg-primary/10 dark:bg-primary/20 p-3 rounded-full text-primary mr-4">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Email</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">dhrubakd53@gmail.com</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="bg-primary/10 dark:bg-primary/20 p-3 rounded-full text-primary mr-4">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Phone</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">+977 9861696726</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="bg-primary/10 dark:bg-primary/20 p-3 rounded-full text-primary mr-4">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Working Hours</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">Mon - Fri: 9AM - 5PM</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-10">
+                            <h4 class="font-semibold mb-4 text-center md:text-left">Follow Me</h4>
+                            <div class="flex space-x-4 justify-center md:justify-start">
+                                <a href="#"
+                                    class="bg-gray-100 dark:bg-dark-lighter hover:bg-primary hover:text-white dark:hover:bg-primary dark:text-gray-300 text-gray-600 w-10 h-10 rounded-full flex items-center justify-center transition-colors">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#"
+                                    class="bg-gray-100 dark:bg-dark-lighter hover:bg-primary hover:text-white dark:hover:bg-primary dark:text-gray-300 text-gray-600 w-10 h-10 rounded-full flex items-center justify-center transition-colors">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#"
+                                    class="bg-gray-100 dark:bg-dark-lighter hover:bg-primary hover:text-white dark:hover:bg-primary dark:text-gray-300 text-gray-600 w-10 h-10 rounded-full flex items-center justify-center transition-colors">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#"
+                                    class="bg-gray-100 dark:bg-dark-lighter hover:bg-primary hover:text-white dark:hover:bg-primary dark:text-gray-300 text-gray-600 w-10 h-10 rounded-full flex items-center justify-center transition-colors">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="md:w-1/2">
+                    <div class="bg-white dark:bg-dark p-9 rounded-xl shadow-md scroll-scale">
+                        <h3 class="text-2xl font-semibold mb-6 text-center md:text-left">Send Me a Message</h3>
+
+                        <form id="contact-form">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <label class="block text-gray-700 dark:text-gray-300 font-medium mb-2">Your
+                                        Name</label>
+                                    <input type="text" id="name"
+                                        class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-dark-lighter dark:text-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                                        required>
+                                </div>
+                                <div>
+                                    <label for="email"
+                                        class="block text-gray-700 dark:text-gray-300 font-medium mb-2">Your
+                                        Email</label>
+                                    <input type="email" id="email"
+                                        class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-dark-lighter dark:text-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                                        required>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="subject"
+                                    class="block text-gray-700 dark:text-gray-300 font-medium mb-2">Subject</label>
+                                <input type="text" id="subject"
+                                    class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-dark-lighter dark:text-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                                    required>
+                            </div>
+
+                            <div class="mb-6">
+                                <label for="message"
+                                    class="block text-gray-700 dark:text-gray-300 font-medium mb-2">Message</label>
+                                <textarea id="message" rows="2"
+                                    class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-dark-lighter dark:text-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                                    required></textarea>
+                            </div>
+
+                            <button type="submit"
+                                class="w-full bg-primary hover:bg-secondary text-white py-3 rounded-lg transition-colors relative overflow-hidden group">
+                                <span class="relative z-10 flex items-center justify-center">
+                                    <i class="fas fa-paper-plane mr-2 group-hover:mr-3 transition-all"></i>
+                                    Send Message
+                                </span>
+                                <span
+                                    class="absolute inset-0 bg-secondary scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"></span>
+                            </button>
+                        </form>
+
+                        <!-- Fix for the contact form success message -->
+                        <div id="form-success" class="hidden mt-4 p-4 bg-green-100 text-green-700 rounded-lg">
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle mr-2"></i>
+                                Your message has been sent successfully!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add a map or image -->
+            <div class="rounded-xl overflow-hidden shadow-md w-full h-72 mt-8">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14128.093647289672!2d85.33895363389095!3d27.716563414587498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb197d9d23f7ed%3A0x2724281b4393865d!2sChabahil%2C%20Kathmandu%2044600!5e0!3m2!1sen!2snp!4v1752630073544!5m2!1sen!2snp"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <!-- Decorative elements -->
+            <div class="relative overflow-hidden">
+                <div
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] rounded-full border-2 border-dashed border-primary/20 animate-spin-slow">
+                </div>
+                <div
+                    class="absolute top-0 right-10 w-20 h-20 bg-blue-400/10 dark:bg-blue-400/5 rounded-full animate-float delay-100">
+                </div>
+                <div class="absolute bottom-10 left-0 w-10 h-10 bg-primary/10 rounded-full animate-float delay-300">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-20">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+                <!-- About Me Column -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-6 text-white">About Me</h3>
+                    <p class="text-gray-400 mb-4">I'm Dhruba Khadka, a passionate frontend developer with 5+ years of
+                        experience in building responsive and user-friendly websites. Let's create something
+                        amazing together!</p>
+                    <div class="flex space-x-4">
+                        <a href="cv-premium.html" target="_blank" rel="noopener noreferrer"
+                            class="bg-primary hover:bg-secondary text-white px-4 py-2 rounded-lg transition-all duration-300 flex items-center space-x-2">
+                            <i class="fas fa-file-alt mr-2"></i>
+                            <span>View Resume</span>
+                        </a>
+                        <a href="#contact"
+                            class="border-2 border-primary text-primary hover:bg-primary hover:text-white px-4 py-2 rounded-lg transition-all duration-300 flex items-center space-x-2">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Contact Me</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links Column -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-6 text-white">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+                        <li><a href="#skills" class="text-gray-400 hover:text-white transition-colors">Skills</a></li>
+                        <li><a href="#projects" class="text-gray-400 hover:text-white transition-colors">Projects</a>
+                        </li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                        <li>
+                            <a href="cv-premium.html" target="_blank" rel="noopener noreferrer"
+                                class="text-gray-400 hover:text-white transition-colors flex items-center">
+                                <i class="fas fa-file-alt mr-2"></i>
+                                <span>View Resume</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info Column -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-6 text-white">Contact Info</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-primary mt-1 mr-4"></i>
+                            <span class="text-gray-400">Kathmandu, Nepal</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope text-primary mt-1 mr-4"></i>
+                            <a href="mailto:dhrubakd53@gmail.com"
+                                class="text-gray-400 hover:text-white transition-colors">dhrubakd53@gmail.com</a>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt text-primary mt-1 mr-4"></i>
+                            <span class="text-gray-400">+977 9861696726</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright and credits -->
+            <div class="border-t border-gray-700 pt-8 mt-8 text-center">
+                <p class="text-gray-400 text-sm mb-2">&copy; <span id="current-year"></span> Dhruba Khadka. All rights
+                    reserved.</p>
+                <p class="text-gray-400 text-sm mb-2">Designed and developed with <i class="fas fa-heart text-red-500"></i>
+                    by Dhruba Khadka.</p>
+                <p class="text-gray-400 text-sm">
+                    <a href="privacy-policy.html" class="hover:text-primary transition-colors" target="_blank">Privacy Policy</a>
+                    <span class="mx-2">|</span>
+                    <a href="terms-of-service.html" class="hover:text-primary transition-colors" target="_blank">Terms of Service</a>
+                    <span class="mx-2">|</span>
+                    <a href="sitemap.html" class="hover:text-primary transition-colors" target="_blank">Sitemap</a>
+
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top"
+        class="fixed bottom-8 right-8 bg-primary hover:bg-blue-600 text-white p-3 w-10 h-10 flex justify-center items-center rounded-full shadow-lg opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
